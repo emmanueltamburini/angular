@@ -5,11 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: 'hero.component.html'
 })
 export class HeroComponent {
-  public title: string = 'Counter app';
-  public numberValue: number = 10;
-  public base: number = 5;
+  public name: string = 'Iron man';
+  public age: number = 45;
+  public getInfo(): string {
+      return `${this.name} ${this.age}`
+  }
 
-  accumulate(valor:number) : void {
-      this.numberValue += valor;
+  get nameCapitalized() {
+    return this.name.toUpperCase();
   }
 }
