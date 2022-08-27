@@ -1,7 +1,11 @@
 <p>Hero List</p>
-<div *ngIf="deletedHero">
+<div *ngIf="deletedHero; else notDeleted">
   <h3>Deleted Hero: <small>{{deletedHero}}</small></h3>
 </div>
+
+<ng-template #notDeleted>
+  <h3>No ha borrado nada</h3>
+</ng-template>
 
 <button (click)="deleteHereo()">
   Delete
