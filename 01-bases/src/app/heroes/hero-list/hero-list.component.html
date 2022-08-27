@@ -1,7 +1,6 @@
-<p>hero-list</p>
-<div>
-  <h3>Deleted Hero:</h3>
-  <span>{{deletedHero}}</span>
+<p>Hero List</p>
+<div *ngIf="deletedHero">
+  <h3>Deleted Hero: <small>{{deletedHero}}</small></h3>
 </div>
 
 <button (click)="deleteHereo()">
