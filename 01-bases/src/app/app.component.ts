@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title: string = 'Contador app';
+  public title: string = 'Counter app';
   public numberValue: number = 10;
+
+  accumulate(valor:number) : void {
+      this.numberValue += valor;
+  }
+
+/*   add () : void {
+      this.numberValue++; 
+  }
+
+  subtract () : void {
+    this.numberValue--; 
+  } */
 }
