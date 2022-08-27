@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
     HeroListComponent
   ],
   exports: [
+    HeroComponent,
     HeroListComponent
   ],
   imports: [
