@@ -8,5 +8,5 @@ import { Character } from '../interfaces/dbz.interface';
 export class CharactersComponent {
 
   @Input('characters')
-  characters: Character[] = [];
+  public characters: Character[] = [];
 }

@@ -9,25 +9,10 @@
   </div>
 
   <div class="col">
-    <h3>Add <small>{{newCharacter.name}}</small></h3>
-    <hr>
-    <form (ngSubmit)="add()">
-      <input
-        type="text"
-        placeholder="Name"
-        name="name"
-        [(ngModel)]="newCharacter.name"
-      >
-<!--       [value]="newCharacter.name"
-      (input)="changeName($event)" -->
-      <input
-        [value]="newCharacter.power"
-        type="number"
-        placeholder="Power"
-        name="power"
-        [(ngModel)]="newCharacter.power"
-      >
-      <button type="submit">Add</button>
-    </form>
+    <app-add-character
+      [characters]="characters"
+      [newCharacter]="newCharacter"
+    >
+    </app-add-character>
   </div>
 </div>
