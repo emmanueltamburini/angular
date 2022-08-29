@@ -18,8 +18,8 @@ export class DbzService {
     return [...this._characters];
   }
 
-  constructor() {
-    console.log('Servicio Inicializado')
+  addCharacter ( character: Character ) {
+    this._characters.push(character);
   }
 
 }

@@ -11,6 +11,4 @@ export class MainPageComponent {
     name: '',
     power: 0
   };
-
-  constructor () {}
 }
