@@ -11,13 +11,29 @@ interface Character {
 })
 export class MainPageComponent {
 
+  public chracters: Character[] = [
+    {
+      name: 'Goku',
+      power: 15000
+    },
+    {
+      name: 'Vegeta',
+      power: 7500
+    }
+  ]
+
   public newCharacter: Character = {
-    name: 'Trunks',
-    power: 14000
+    name: '',
+    power: 0
   }
 
   public add (): void {
-    console.log(this.newCharacter);
+    if (this.newCharacter.name.trim().length === 0) { return; }
+    this.chracters.push(this.newCharacter);
+    this.newCharacter = {
+      name: '',
+      power: 0
+    }
   }
 
 /*   public changeName(event: any) : void {

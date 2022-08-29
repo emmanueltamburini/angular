@@ -6,9 +6,7 @@
     <h3>Characters</h3>
     <hr>
     <ul>
-      <li>Krillin - 700</li>
-      <li>Goku - 15,000</li>
-      <li>Vegeta - 8,500</li>
+      <li *ngFor="let chracter of chracters;">{{chracter.name}} - {{chracter.power | number}}</li>
     </ul>
   </div>
 
