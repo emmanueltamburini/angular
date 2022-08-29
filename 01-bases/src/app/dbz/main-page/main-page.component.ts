@@ -22,4 +22,9 @@ export class MainPageComponent {
     name: '',
     power: 0
   };
+
+  public addNewCharecter (currentCharacter: Character): void {
+    if (currentCharacter.name.trim().length === 0) { return; }
+    this.characters.push(currentCharacter);
+  }
 }
