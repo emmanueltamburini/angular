@@ -11,7 +11,7 @@ interface Character {
 })
 export class MainPageComponent {
 
-  public chracters: Character[] = [
+  public characters: Character[] = [
     {
       name: 'Goku',
       power: 15000
@@ -29,7 +29,7 @@ export class MainPageComponent {
 
   public add (): void {
     if (this.newCharacter.name.trim().length === 0) { return; }
-    this.chracters.push(this.newCharacter);
+    this.characters.push(this.newCharacter);
     this.newCharacter = {
       name: '',
       power: 0
