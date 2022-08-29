@@ -3,12 +3,9 @@
 
 <div class="row">
   <div class="col">
-    <app-characters></app-characters>
-<!--     <h3>Characters</h3>
-    <hr>
-    <ul>
-      <li *ngFor="let chracter of characters;">{{chracter.name}} - {{chracter.power | number}}</li>
-    </ul> -->
+    <app-characters [characters]="characters">
+
+    </app-characters>
   </div>
 
   <div class="col">
