@@ -8,8 +8,8 @@ import { DbzService } from '../services/dbz.service';
 })
 export class CharactersComponent {
 
-  @Input('characters')
-  public characters: Character[] = [];
-
+  get characters(): Character[] {
+    return this.dbzService.characters;
+  }
   constructor (private dbzService: DbzService) {}
 }
