@@ -19,7 +19,7 @@ export class AddCharacterComponent {
     if (this.newCharacter.name.trim().length === 0) { return; }
 
     console.log(this.newCharacter);
-  
+
     this.onNewCharacter.emit(this.newCharacter);
 
     this.newCharacter = {

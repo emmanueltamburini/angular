@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Character } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -26,5 +27,10 @@ export class MainPageComponent {
   public addNewCharecter (currentCharacter: Character): void {
     if (currentCharacter.name.trim().length === 0) { return; }
     this.characters.push(currentCharacter);
+  }
+
+
+  constructor (private dbzService: DbzService) {
+    
   }
 }
