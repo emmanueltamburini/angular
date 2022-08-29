@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col">
-    <h3>Personajes</h3>
+    <h3>Characters</h3>
     <hr>
     <ul>
       <li>Krillin - 700</li>
@@ -13,12 +13,25 @@
   </div>
 
   <div class="col">
-    <h3>Agregar</h3>
+    <h3>Add <small>{{newCharacter.name}}</small></h3>
     <hr>
     <form (ngSubmit)="add()">
-      <input type="text" placeholder="Nombre">
-      <input type="number" placeholder="Poder">
-      <button type="submit">Agregar</button>
+      <input
+        type="text"
+        placeholder="Name"
+        name="name"
+        [(ngModel)]="newCharacter.name"
+      >
+<!--       [value]="newCharacter.name"
+      (input)="changeName($event)" -->
+      <input
+        [value]="newCharacter.power"
+        type="number"
+        placeholder="Power"
+        name="power"
+        [(ngModel)]="newCharacter.power"
+      >
+      <button type="submit">Add</button>
     </form>
   </div>
 </div>
