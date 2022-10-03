@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lifecycles';
+
+  public show: boolean = true;
+
+  public onHide(): void {
+    this.show = !this.show;
+  }
 }
